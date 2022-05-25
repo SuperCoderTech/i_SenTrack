@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
     timer = Timer.periodic(
         const Duration(seconds: 5),
         (Timer t) => determinePosition().then((pos) => setState(() {
-              position = pos.latitude.toString() + ", " + pos.longitude.toString();
+              position = pos.latitude.toStringAsFixed(3) + ", " + pos.longitude.toStringAsFixed(3);
             })));
   }
 
