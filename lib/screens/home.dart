@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
     timer = Timer.periodic(
         const Duration(seconds: 5),
         (Timer t) => determinePosition().then((pos) => setState(() {
-              position = pos.toString();
+              position = pos.latitude.toString() + ", " + pos.longitude.toString();
             })));
   }
 
@@ -28,9 +28,11 @@ class _HomeState extends State<Home> {
         title: const Text("I-SenTrack"),
       ),
       body: Container(
+          width: double.infinity,
+          height: double.infinity,
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Text(position)
-      ])),
+            Text(position)
+          ])),
     );
   }
 }
