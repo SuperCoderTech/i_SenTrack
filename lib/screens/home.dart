@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    bool isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
+    var isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
 
     return Scaffold(
       appBar: AppBar(
@@ -35,8 +35,8 @@ class _HomeState extends State<Home> {
           height: double.infinity,
           decoration: BoxDecoration(color: Colors.white38),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-            const CircleAvatar(backgroundColor: Color(0xFFf05624), radius: 110),
-            Text(position, style: TextStyle(color: isPortrait ? Color(0xFFa71e4a) : Colors.black, fontSize: 22, fontWeight: FontWeight.w700))
+            CircleAvatar(backgroundColor: isPortrait ? Color(0xFFf05624) : Colors.black26, radius: 110),
+            Text(position, style: const TextStyle(color: Color(0xFFa71e4a), fontSize: 22, fontWeight: FontWeight.w700))
           ])),
     );
   }
