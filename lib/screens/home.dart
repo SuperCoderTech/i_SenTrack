@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           height: double.infinity,
           decoration: BoxDecoration(color: Color(0xFFee3324)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-            CircleAvatar()
+            CircleAvatar(backgroundColor: Color(0xFFf05624), radius: 110)
           ])),
     );
   }
