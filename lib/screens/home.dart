@@ -33,9 +33,10 @@ class _HomeState extends State<Home> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(color: Colors.white38),
+          decoration: const BoxDecoration(color: Colors.white38),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-            CircleAvatar(backgroundColor: isPortrait ? Color(0xFFf05624) : Colors.black26, radius: 110),
+            CircleAvatar(backgroundColor: isPortrait ? const Color(0xFFf05624) : Colors.black26, radius: 110),
+            const SizedBox(height: 10),
             Text(position, style: const TextStyle(color: Color(0xFFa71e4a), fontSize: 22, fontWeight: FontWeight.w700))
           ])),
     );
