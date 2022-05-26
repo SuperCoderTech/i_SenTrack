@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(color: Color(0xFFee3324)),
+          decoration: BoxDecoration(color: Colors.white38),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
             CircleAvatar(backgroundColor: Color(0xFFf05624), radius: 110)
           ])),
