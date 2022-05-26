@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:supercoder/utils/utilities.dart';
 
 class Home extends StatefulWidget {
@@ -30,8 +31,9 @@ class _HomeState extends State<Home> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
+          decoration: BoxDecoration(color: Color(0xFFee3324)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-            Text(position)
+            CircleAvatar()
           ])),
     );
   }
