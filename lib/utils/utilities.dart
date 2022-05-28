@@ -28,3 +28,14 @@ Future<LocationData?> getLocationCoOrdinates() async {
   _locationData = await location.getLocation();
   return _locationData;
 }
+
+saveInSharedPreference(key, value) async {
+  final SharedPreferences pref = await prefs;
+  await pref.setString(key, value);
+}
+
+getFromSharedPreference(key) async {
+  final SharedPreferences pref = await prefs;
+  String resp = await pref.getString(key) ?? "Unknown Location";
+  return resp;
+}
