@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(color: getColor()),
+          decoration: BoxDecoration(color: getColor()),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
             CircleAvatar(backgroundColor: isPortrait ? const Color(0xFFf05624) : Colors.black26, radius: 110),
             const SizedBox(height: 10),
