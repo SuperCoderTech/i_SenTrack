@@ -51,6 +51,13 @@ class _HomeState extends State<Home> {
             })));
   }
 
+  Color getColor() {
+    try {
+      if (int.parse(_luxString) < 20) return Colors.black38;
+    } catch (err) {}
+    return Colors.white38;
+  }
+
   @override
   Widget build(BuildContext context) {
     var isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
@@ -62,7 +69,7 @@ class _HomeState extends State<Home> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(color: Colors.white38),
+          decoration: const BoxDecoration(color: getColor()),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
             CircleAvatar(backgroundColor: isPortrait ? const Color(0xFFf05624) : Colors.black26, radius: 110),
             const SizedBox(height: 10),
